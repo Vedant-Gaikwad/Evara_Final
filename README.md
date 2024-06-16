@@ -17,7 +17,7 @@ Key Features:
 
 Future Scope:
 
- ->We can impliment Backend Development Technologies for better User-Interface
+ ->We can impliment Backend Development Technologies for better User-Interface aand working of website
  
  ->We can include Rating Systems for products
 
