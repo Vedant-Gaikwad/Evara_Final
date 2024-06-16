@@ -143,37 +143,37 @@
         <form action="payment-success.html" method="post">
             <div id="card-fields" class="hidden">
                 <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" name="cardNumber">
+                <input type="text" id="cardNumber" name="cardNumber" required>
 
                 <label for="expiryDate">Expiry Date:</label>
-                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
 
                 <label for="cvv">CVV:</label>
-                <input type="number" id="cvv" name="cvv">
+                <input type="number" id="cvv" name="cvv" required>
 
                 <label for="name">Name on Card:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name"required>
             </div>
 
             <div id="paypal-fields" class="hidden">
                 <label for="paypalEmail">PayPal Email:</label>
-                <input type="email" id="paypalEmail" name="paypalEmail">
+                <input type="email" id="paypalEmail" name="paypalEmail"required>
             </div>
 
             <div id="netbanking-fields" class="hidden">
                 <label for="bankName">Bank Name:</label>
-                <input type="text" id="bankName" name="bankName">
+                <input type="text" id="bankName" name="bankName" required>
 
                 <label for="accountNumber">Account Number:</label>
-                <input type="text" id="accountNumber" name="accountNumber">
+                <input type="text" id="accountNumber" name="accountNumber" required>
 
                 <label for="ifsc">IFSC Code:</label>
-                <input type="text" id="ifsc" name="ifsc">
+                <input type="text" id="ifsc" name="ifsc"required>
             </div>
 
             <div id="upi-fields" class="hidden">
                 <label for="upiId">UPI ID:</label>
-                <input type="text" id="upiId" name="upiId">
+                <input type="text" id="upiId" name="upiId" required>
             </div>
 
             <label for="email">Email:</label>
