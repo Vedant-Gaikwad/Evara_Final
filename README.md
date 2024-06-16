@@ -18,5 +18,15 @@ Key Features:
 Future Scope:
 
  ->We can impliment Backend Development Technologies for better User-Interface
+ 
  ->We can include Rating Systems for products
- ->
+
+ The Team:
+
+ ->Vedant Gaikwad-https://github.com/Vedant-Gaikwad
+
+ ->Samruddhi Kala-https://github.com/Samruddhi-Kala
+
+ ->Kavya Dhawale-https://github.com/KavyaD11
+
+ ->Amogha Khare-https://github.com/
