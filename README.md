@@ -32,4 +32,4 @@ Future Scope:
 
  ->Kavya Dhawale-https://github.com/KavyaD11
 
- ->Amogha Khare-https://github.com/
+ ->Amogha Khare-https://github.com/AmoghaK1
