@@ -1,5 +1,7 @@
 # Evara- One for All
 
+## Link - https://vedant-gaikwad.github.io/Evara_Final/
+
 ## Enhancing Learning Experiences through Shared Resources
 
 Welcome to Evara, an innovative platform where students seamlessly exchange educational resources. Inspired by the simplicity of OLX.com, Evara facilitates the sharing of textbooks, study guides, and notes among peers. With personalized user profiles, intuitive search features, and secure messaging, Evara promotes collaborative learning and supports students in their academic journeys.
