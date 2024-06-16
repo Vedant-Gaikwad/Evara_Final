@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sell Product</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #03363c;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      border: none;
+      overflow-y: auto;
+      max-height: 90%;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input[type="text"],
+    textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #ff7e5f;
+      box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #feb47b, #ff7e5f);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 10px;
+      }
+
+      input[type="text"],
+      textarea {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="weblogo.png" alt="Company Logo">
+    </div>
+    <h2>Sell a Product</h2>
+    <form id="sellForm">
+      <label for="sellername">Seller Name:</label>
+      <input type="text" id="sellername" required>
+      <label for="sellernum">Seller Number:</label>
+      <input type="text" id="sellernum" required>
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" required>
+      <label for="price">Price:</label>
+      <input type="text" id="price" required>
+      <label for="Location">Location:</label>
+      <input type="text" id="Location" required>
+      <label for="productDetail">Product Detail:</label>
+      <textarea id="productDetail" required></textarea>
+      <label for="img1">Image 1 URL:</label>
+      <input type="text" id="img1" required>
+      <label for="img2">Image 2 URL:</label>
+      <input type="text" id="img2" required>
+      <label for="img3">Image 3 URL:</label>
+      <input type="text" id="img3" required>
+
+      <a href="user.html"><button type="button" onclick="postProduct()">Post</button></a>
+    </form>
+  </div>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
