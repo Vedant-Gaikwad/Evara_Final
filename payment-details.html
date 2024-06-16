@@ -135,12 +135,19 @@
                 upiFields.classList.remove('hidden');
             }
         });
+
+        function submitPayment() {
+            // Perform form validation or any other required tasks here
+
+            // Redirect to payment-success.html
+            window.location.href = 'payment-success.html';
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <h2>Enter Payment Details for <span id="method-title"></span></h2>
-        <form action="payment-success.html" method="post">
+        <form onsubmit="submitPayment(); return false;">
             <div id="card-fields" class="hidden">
                 <label for="cardNumber">Card Number:</label>
                 <input type="text" id="cardNumber" name="cardNumber">
