@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #03363c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border: none;
+            overflow-y: auto;
+            max-height: 90%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-method {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .payment-method:hover {
+            background: linear-gradient(to right, #feb47b, #ff7e5f);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-methods">
+            <a href="payment-details.html?method=Credit+Card"><div class="payment-method">Credit Card</div></a>
+            <a href="payment-details.html?method=Debit+Card"><div class="payment-method">Debit Card</div></a>
+            <a href="payment-details.html?method=PayPal"><div class="payment-method">PayPal</div></a>
+            <a href="payment-details.html?method=Net+Banking"><div class="payment-method">Net Banking</div></a>
+            <a href="payment-details.html?method=UPI"><div class="payment-method">UPI</div></a>
+        </div>
+    </div>
+</body>
+</html>

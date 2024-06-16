@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #03363c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            border: none;
+            overflow-y: auto;
+            max-height: 90%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus {
+            border-color: #009688;
+        }
+
+        .btn {
+            padding: 12px;
+            font-size: 18px;
+            color: #fff;
+            background: #009688;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #00796b;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="email"] {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paymentMethod = urlParams.get('method');
+            const methodTitle = document.getElementById('method-title');
+            const cardFields = document.getElementById('card-fields');
+            const paypalFields = document.getElementById('paypal-fields');
+            const netbankingFields = document.getElementById('netbanking-fields');
+            const upiFields = document.getElementById('upi-fields');
+
+            methodTitle.innerText = paymentMethod;
+
+            cardFields.classList.add('hidden');
+            paypalFields.classList.add('hidden');
+            netbankingFields.classList.add('hidden');
+            upiFields.classList.add('hidden');
+
+            if (paymentMethod === "Credit Card" || paymentMethod === "Debit Card") {
+                cardFields.classList.remove('hidden');
+            } else if (paymentMethod === "PayPal") {
+                paypalFields.classList.remove('hidden');
+            } else if (paymentMethod === "Net Banking") {
+                netbankingFields.classList.remove('hidden');
+            } else if (paymentMethod === "UPI") {
+                upiFields.classList.remove('hidden');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Payment Details for <span id="method-title"></span></h2>
+        <form action="payment-success.html" method="post">
+            <div id="card-fields" class="hidden">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber">
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv">
+
+                <label for="name">Name on Card:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div id="paypal-fields" class="hidden">
+                <label for="paypalEmail">PayPal Email:</label>
+                <input type="email" id="paypalEmail" name="paypalEmail">
+            </div>
+
+            <div id="netbanking-fields" class="hidden">
+                <label for="bankName">Bank Name:</label>
+                <input type="text" id="bankName" name="bankName">
+
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber">
+
+                <label for="ifsc">IFSC Code:</label>
+                <input type="text" id="ifsc" name="ifsc">
+            </div>
+
+            <div id="upi-fields" class="hidden">
+                <label for="upiId">UPI ID:</label>
+                <input type="text" id="upiId" name="upiId">
+            </div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
